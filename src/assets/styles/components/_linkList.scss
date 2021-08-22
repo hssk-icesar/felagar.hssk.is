@@ -1,0 +1,66 @@
+// Link list container page layout
+
+.linkListPage {
+    display: block;
+    text-align: center;
+
+    .linkContainer {
+        margin: $spacing-y $spacing-x;
+        padding: .5rem;
+
+        .linkListIcon > svg {
+            height: 4rem;
+            margin: 1rem auto;
+            width: auto;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            padding: .5rem 0 1rem 0;
+            font-weight: 400;
+        }
+
+        ul {
+            text-align: left;
+            li > a {
+                display: block;
+                position: relative;
+                height: 3.8em;
+                padding: .1em 4em .1em 1em;
+                margin: .5em 0;
+                border: .1rem solid $gray-light;
+                border-radius: .5rem;
+                background-color: $gray-lightest;
+                text-transform: none;
+                white-space: nowrap; 
+                text-decoration: none;
+                color: $gray-darkest;
+
+                .linkLocation {
+                    display:block;
+                    color: $gray;
+                    font-style: italic;
+                }
+
+                svg {
+                    position: absolute;
+                    right: .6em;
+                    top: .6em;
+                }
+            }
+
+            li > a:hover {
+                background-color: $gray-light;
+            }
+        }
+    }
+
+    @include mq(md) {
+        .linkContainer {
+            display: inline-block;
+            width: 23rem;
+            vertical-align:top
+        }
+    }
+}
+

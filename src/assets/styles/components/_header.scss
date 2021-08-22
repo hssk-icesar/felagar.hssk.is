@@ -1,5 +1,18 @@
 .header {
     padding: $spacing-y 0;
+    
+
+    .pageTitle {
+        text-decoration: none;
+        font-size: 1.3rem;
+        color: #f23030;
+
+
+        .icon {
+            font-size: 3.5rem;
+            padding-right: 1rem;
+        }
+    }
 
     &__inner {
         display: flex;

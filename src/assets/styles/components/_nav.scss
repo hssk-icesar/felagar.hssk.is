@@ -1,4 +1,14 @@
 .nav {
+    a {
+        text-decoration: none;
+        color: $gray-darkest
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: $gray-darkest
+    }
+
     &__menu {
         display: none;
         position: absolute;

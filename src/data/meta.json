@@ -1,7 +1,7 @@
 {
-    "title": "Eleventastic",
-    "description": "An Eleventy Starter Kit",
+    "title": "HSSK - Innri vefur",
+    "description": "Innri síða fyrir þáttakendur í starfi Hjálparsveitar skáta í Kópavogi",
     "url": "https://eleventastic.netlify.app",
-    "lang": "en",
-    "locale": "en_us"
+    "lang": "is",
+    "locale": "is_is"
 }
