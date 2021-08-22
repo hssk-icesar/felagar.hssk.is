@@ -45,23 +45,23 @@ html {
 // `.class-name { @import "bootstrap"; }`).
 //
 // Includes future-proofed vendor prefixes as well.
-@at-root {
-    @-moz-viewport {
-        width: device-width;
-    }
-    @-ms-viewport {
-        width: device-width;
-    }
-    @-o-viewport {
-        width: device-width;
-    }
-    @-webkit-viewport {
-        width: device-width;
-    }
-    @viewport {
-        width: device-width;
-    }
-}
+// @at-root {
+//     @-moz-viewport {
+//         width: device-width;
+//     }
+//     @-ms-viewport {
+//         width: device-width;
+//     }
+//     @-o-viewport {
+//         width: device-width;
+//     }
+//     @-webkit-viewport {
+//         width: device-width;
+//     }
+//     @viewport {
+//         width: device-width;
+//     }
+// }
 
 //
 // Reset HTML, body, and more
