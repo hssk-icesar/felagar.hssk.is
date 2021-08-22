@@ -9,7 +9,7 @@
         padding: .5rem;
 
         .linkListIcon > svg {
-            height: 4rem;
+            height: 5rem;
             margin: 1rem auto;
             width: auto;
         }
@@ -25,8 +25,8 @@
             li > a {
                 display: block;
                 position: relative;
-                height: 3.8em;
-                padding: .1em 4em .1em 1em;
+                height: 4em;
+                padding: .25em .7em;
                 margin: .5em 0;
                 border: .1rem solid $gray-light;
                 border-radius: .5rem;
@@ -44,8 +44,8 @@
 
                 svg {
                     position: absolute;
-                    right: .6em;
-                    top: .6em;
+                    right: .75em;
+                    top: .75em;
                 }
             }
 
