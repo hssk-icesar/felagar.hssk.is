@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>HSSK - Innri vefur</title>
     <subtitle>Innri síða fyrir þáttakendur í starfi Hjálparsveitar skáta í Kópavogi</subtitle>
-    <link href="https://eleventastic.netlify.app/feed.xml" rel="self" type="application/atom+xml" />
-    <link href="https://eleventastic.netlify.app" rel="alternate" type="text/html"/>
+    <link href="https://felagar.hssk.is/feed.xml" rel="self" type="application/atom+xml" />
+    <link href="https://felagar.hssk.is" rel="alternate" type="text/html"/>
     <author>
         <name>HSSK - Innri vefur</name>
     </author>
     
-    <id>https://eleventastic.netlify.app/</id></feed>
+    <id>https://felagar.hssk.is/</id></feed>

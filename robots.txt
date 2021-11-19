@@ -3,4 +3,4 @@
 User-agent: *
 Disallow: /build.txt
 
-Sitemap: https://eleventastic.netlify.app/sitemap.xml
+Sitemap: https://felagar.hssk.is/sitemap.xml
