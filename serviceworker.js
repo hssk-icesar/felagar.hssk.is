@@ -1,5 +1,5 @@
 
-const CACHE_NAME = 'cache-2021-11-19T20:32:15.291'
+const CACHE_NAME = 'cache-2022-01-16T09:39:44.958'
 const OFFLINE_PAGE_URL = '/offline/'
 const PRECACHE_RESOURCES = []
 const IGNORED_HOSTS = ['localhost']
