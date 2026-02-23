@@ -2,16 +2,22 @@
 // SCSS CUSTOM FUNCTIONS
 //--------------------
 
-@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
-    $min: map-get($breakpoints, $name);
-    @return if($min != 0, $min, null);
+@use 'sass:map';
+@use 'variables' as *;
+
+@function breakpoint-min($name, $bps: $breakpoints) {
+    $min: map.get($bps, $name);
+    @if $min != 0 {
+        @return $min;
+    }
+    @return null;
 }
 
 // z-index layering
 @function z($layer) {
-    @if map-has-key($z-layers, $layer) == false {
+    @if map.has-key($z-layers, $layer) == false {
         @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
     }
 
-    @return map-get($z-layers, $layer);
+    @return map.get($z-layers, $layer);
 }

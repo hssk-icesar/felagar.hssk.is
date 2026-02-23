@@ -1,5 +1,4 @@
-const htmlmin = require('html-minifier')
-const critical = require('critical')
+const htmlmin = require('html-minifier-terser')
 const buildDir = 'dist'
 
 const shouldTransformHTML = (outputPath) =>
@@ -11,9 +10,9 @@ const isHomePage = (outputPath) => outputPath === `${buildDir}/index.html`
 
 process.setMaxListeners(Infinity)
 module.exports = {
-    htmlmin: function (content, outputPath) {
+    htmlmin: async function (content, outputPath) {
         if (shouldTransformHTML(outputPath)) {
-            return htmlmin.minify(content, {
+            return await htmlmin.minify(content, {
                 useShortDoctype: true,
                 removeComments: true,
                 collapseWhitespace: true
@@ -25,6 +24,8 @@ module.exports = {
     critical: async function (content, outputPath) {
         if (shouldTransformHTML(outputPath) && isHomePage(outputPath)) {
             try {
+                // Dynamic import for ESM module
+                const { generate } = await import('critical')
                 const config = {
                     base: `${buildDir}/`,
                     html: content,
@@ -32,7 +33,7 @@ module.exports = {
                     width: 1280,
                     height: 800
                 }
-                const { html } = await critical.generate(config)
+                const { html } = await generate(config)
                 return html
             } catch (err) {
                 console.error(err)

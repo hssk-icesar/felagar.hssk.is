@@ -56,9 +56,6 @@ module.exports = function (config) {
     config.addPassthroughCopy('src/assets/images')
     config.addPassthroughCopy('src/assets/fonts')
 
-    // Deep-Merge
-    config.setDataDeepMerge(true)
-
     // Base Config
     return {
         dir: {

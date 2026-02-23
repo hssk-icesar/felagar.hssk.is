@@ -4,34 +4,33 @@
 
 //--------------------
 // UTILITIES
+// Load utilities once here, they use @use internally
 //--------------------
 
-@import 'utils/functions';
-@import 'utils/variables';
-@import 'utils/mixins';
+@use 'utils';
 
 //--------------------
 // BASE MODULES
 // partials with global scope
 //--------------------
 
-@import 'base/fonts';
-@import 'base/normalize';
-@import 'base/reboot';
-@import 'base/layout';
-@import 'base/typography';
-@import 'base/focus';
-@import 'base/utilities';
-@import 'base/screenreader';
-@import 'base/animation';
+@use 'base/fonts';
+@use 'base/normalize';
+@use 'base/reboot';
+@use 'base/layout';
+@use 'base/typography';
+@use 'base/focus';
+@use 'base/utilities';
+@use 'base/screenreader';
+@use 'base/animation';
 
 //--------------------
 // COMPONENTS
 // partials with local scope to a component
 //--------------------
 
-@import 'components/header';
-@import 'components/nav';
-@import 'components/footer';
-@import 'components/icon';
-@import 'components/linkList';
+@use 'components/header';
+@use 'components/nav';
+@use 'components/footer';
+@use 'components/icon';
+@use 'components/linkList';

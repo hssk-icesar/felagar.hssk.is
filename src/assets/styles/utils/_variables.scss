@@ -2,6 +2,8 @@
 // SCSS VARIABLES
 //--------------------
 
+@use 'sass:color';
+
 // Grid breakpoints
 //
 // Define the minimum and maximum dimensions at which your layout will change,
@@ -43,7 +45,7 @@ $brand-red: #fc6767;
 $bg-color: #fff;
 $text-color: $gray-darkest;
 $brand-color-primary: $brand-red;
-$brand-color-primary-offset: darken($brand-red, 6%);
+$brand-color-primary-offset: color.adjust($brand-red, $lightness: -6%);
 
 // Typography
 //

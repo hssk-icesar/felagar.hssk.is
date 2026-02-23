@@ -2,6 +2,9 @@
 // SCSS MIXINS
 //--------------------
 
+@use 'variables' as *;
+@use 'functions' as *;
+
 @mixin mq($name) {
     $min: breakpoint-min($name, $breakpoints);
     @if $min {

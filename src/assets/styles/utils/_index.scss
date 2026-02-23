@@ -1,0 +1,8 @@
+//--------------------
+// UTILITIES INDEX
+// Forwards all utility modules for use with @use 'utils'
+//--------------------
+
+@forward 'variables';
+@forward 'functions';
+@forward 'mixins';

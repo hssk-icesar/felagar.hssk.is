@@ -5,7 +5,7 @@
 const ENTRY_FILE_NAME = 'main.scss'
 
 const path = require('path')
-const sass = require('node-sass')
+const sass = require('sass')
 const CleanCSS = require('clean-css')
 const cssesc = require('cssesc')
 const isProd = process.env.ELEVENTY_ENV === 'production'
@@ -22,20 +22,15 @@ module.exports = class {
 
     // Compile Sass to CSS,
     // Embed Source Map in Development
-    async compile(config) {
-        return new Promise((resolve, reject) => {
-            if (!isProd) {
-                config.sourceMap = true
-                config.sourceMapEmbed = true
-                config.outputStyle = 'expanded'
-            }
-            return sass.render(config, (err, result) => {
-                if (err) {
-                    return reject(err)
-                }
-                resolve(result.css.toString())
-            })
-        })
+    async compile(entryPath) {
+        const options = {
+            file: entryPath,
+            style: isProd ? 'compressed' : 'expanded',
+            sourceMap: !isProd,
+            sourceMapIncludeSources: !isProd
+        }
+        const result = sass.compile(entryPath, options)
+        return result.css
     }
 
     // Minify & Optimize with CleanCSS in Production
@@ -100,7 +95,7 @@ module.exports = class {
     // render the CSS file
     async render({ entryPath }) {
         try {
-            const css = await this.compile({ file: entryPath })
+            const css = await this.compile(entryPath)
             const result = await this.minify(css)
             return result
         } catch (err) {
@@ -111,7 +106,7 @@ module.exports = class {
             } else {
                 // otherwise display the error overlay
                 console.error(err)
-                const msg = err.formatted || err.message
+                const msg = err.message
                 return this.renderError(msg)
             }
         }
